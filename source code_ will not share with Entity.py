@@ -107,38 +107,38 @@ while True:
     os.system('cmd /c "wevtutil gl security"')
     print("\n<<WEC server is now ready. Please create the Subcription in Event viewer>>\n")
     os.system('cmd /c "eventvwr"')
-    break
+    
  elif num == 3:
     print("\n<<Installing Wincollect in Non-Domain Server>>\n")
     os.system('cmd /c "msiexec.exe /l*v WC_install.log /qb /i  wincollect_install.msi INSTALLDIR=\"C:\\Program Files\\IBM\WinCollect\\" WC_SCRIPT=\"C:\\Program Files\\IBM\WinCollect\\xml_files\\update_option_nonad.xml""')
     print("\n<<Installation of Wncollect in Non-Domain Server completed>>\n")
-    break
+    
  elif num == 4:
     print("\n<<Installing Wincollect in IIS Servers>>\n")
     os.system('cmd /c "msiexec.exe /l*v WC_install.log /qb /i  wincollect_install.msi INSTALLDIR=\"C:\\Program Files\\IBM\WinCollect\\" WC_SCRIPT=\"C:\\Program Files\\IBM\WinCollect\\xml_files\\update_option_iis.xml""')
     print("\n<<Installation of Wincollect in IIS Servers completed")
-    break
+    
  elif num == 5:
     print("\n<<Installing Wincollect in DHCP Servers>>\n")
     os.system('cmd /c "msiexec.exe /l*v WC_install.log /qb /i wincollect_install.msi INSTALLDIR=\"C:\\Program Files\\IBM\WinCollect\\" WC_SCRIPT=\"C:\\Program Files\\IBM\WinCollect\\xml_files\\update_option_dhcp.xml""')
     print("\n<<Installation of Wincollect in DHCP Servers completed>>\n")
-    break
+    
  elif num == 6:
     print("\n<<Installing Wincollect in Exchange Servers>>\n")
-    os.system('cmd /c "msiexec.exe /l*v WC_install.log /qb /i W wincollect_install.msi INSTALLDIR=\"C:\\Program Files\\IBM\WinCollect\\" WC_SCRIPT=\"C:\\Program Files\\IBM\WinCollect\\xml_files\\update_option_ex.xml""')
+    os.system('cmd /c "msiexec.exe /l*v WC_install.log /qb /i wincollect_install.msi INSTALLDIR=\"C:\\Program Files\\IBM\WinCollect\\" WC_SCRIPT=\"C:\\Program Files\\IBM\WinCollect\\xml_files\\update_option_ex.xml""')
     print("\n<<Installation of wincollect in Exchange Servers completed>>\n")
-    break
+    
  elif num == 7:
     print("\n<<Wincollect Agent will now upgrade>>\n")
     os.system('cmd /c "msiexec.exe /qn /i wincollect_upgrade.msi"')
     print("\n<<Upgrade Completed>>")
-    break
+    
  elif num == 8:
     print("<<Hostname name>>\n")
     os.system('cmd /c "hostname"')
     print("\n\n<<Server IP details>>\n")  
     os.system('cmd /c "ipconfig"')
-    break
+    
  else:
     print("Please enter correct option")
     continue
