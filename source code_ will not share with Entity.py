@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import os
 
-print ("                  NCSA Windows Onboarding Tool 28-02-2023_PJ1.1\n")
+print ("                  Windows Onboarding Tool 28-02-2023_PJ1.1\n")
 # make sure syslog ip is not updated
 valuenotset = 0
 tree = ET.parse("update_option_wec.xml")
@@ -13,7 +13,7 @@ for param_elem in root.findall('.//Parameter[@name="Address"]'):
         valuenotset = 1
 
 if valuenotset == 1:
- syslogipvalue = input('\nPlease Enter NCSA SYSLOG IP ->')
+ syslogipvalue = input('\nPlease Enter SYSLOG IP ->')
 
 # First file
  tree = ET.parse(r"update_option_wec.xml")
